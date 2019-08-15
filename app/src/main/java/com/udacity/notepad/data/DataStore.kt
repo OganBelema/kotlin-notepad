@@ -8,11 +8,8 @@ import java.util.concurrent.Executors
 
 object DataStore {
 
-    val EXEC: Executor = Executors.newSingleThreadExecutor()
-
     @JvmStatic
     lateinit var notes: NoteDatabase
-        private set
 
     fun init(context: Context) {
         notes = NoteDatabase(context)
